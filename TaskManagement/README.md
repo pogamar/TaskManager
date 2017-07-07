@@ -15,9 +15,10 @@ First the user will see a list of actions and the user has to pick a number for 
 
 	*To add a task, the user has to provide two information, the task name and task description
 	*To edit a task, the user has to provide the task name. If the user gives the correct task name, the program will fetch a  table showing the previous
-		information. The the user has to provide at least one information (Task Name/ Description) to edit the task detail.
+		information. The the user has to provide at least one information (Task Name/ Description) to edit the task detail. The user can skip giving information
+		by pressing enter, when a input has been asked.
 	*To delete a task, the user has to provide the task name. If the user gives the correct task name, the program will fetch a  table showing which row 
-	has been deleted.
+	has been deleted. The user can skip giving information by pressing enter, when a input has been asked.
 
 	
 Code description:
