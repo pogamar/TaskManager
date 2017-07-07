@@ -22,7 +22,7 @@ First the user will see a list of actions and the user has to pick a number for 
 
 	
 Code description:
-
+The program has been designed with MVC structure in mind. 
 The code has 3 classes. 
 	1. MainViewController
 	2. Task
@@ -30,6 +30,7 @@ The code has 3 classes.
 	
 "MainViewController" is the controller for this program. "Task" is the model file, it mainly interacts with the database and passes data to controller. 
 The "View" operates as the view in MVC it only shows data and collects input and passes it to controller.
+
 
 MainViewController has the following methods,
 	1. showView
@@ -40,11 +41,17 @@ MainViewController has the following methods,
 	6. _actionCB
 	7. getTaskIdVC
 	
-	*"showView" is the entry point of the program, the main function in the Main.cpp calls this method. It calls the view method(showCommands) with 
-		parameters. The view method then shows option. And once the user has given an input, it calls the callback function, give by "showView"
+	*"showView" is the entry point of the program, the main function in the Main.cpp calls this method. It calls the View method(showCommands) with 
+		parameters. The "showCommands" method then shows option. And once the user has given an input, it calls the callback function, give by "showView"
 	
-	*"addTaskVC" shows user istruction via, "getTaskNameDescription" method in view. "getTaskNameDescription" also returns Task Name and Task Description
+	*"addTaskVC" shows user instruction via, "getTaskNameDescription" method in View. "getTaskNameDescription" also returns Task Name and Task Description
 		from user. Then "addTaskVC" calls the "addItem" in Task. Once the insertion is complete. It shows success message.
+		
+	*"editTaskVC" gets a task name from "getTaskName" method in View. Then it fetches a row with "getRow" method in Task model. Then it gets name and description
+		with "getTaskNameDescription" method in View. Then it updates information with "updateItem" method in Task.
+		
+	*"deleteTaskVC" gets a task name from "getTaskName" method in View. Then it fetches a row with "getRow" method in Task model. And then deletes the row 
+		with "deleteItem" method in Task
 		
 
 		
