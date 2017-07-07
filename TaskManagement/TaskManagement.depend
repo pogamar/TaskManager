@@ -12,7 +12,7 @@
 1496938190 d:\code\taskmanagement\libraries\sqlite3.h
 	<stdarg.h>
 
-1499394592 source:d:\code\taskmanagement\src\task.cpp
+1499441983 source:d:\code\taskmanagement\src\task.cpp
 	"Task.h"
 	<iostream>
 	<cstdio>
@@ -43,7 +43,7 @@
 1493334762 d:\code\taskmanagement\libraries\bprinter-master\include\bprinter\impl\table_printer.tpp.h
 	<boost/spirit/include/karma.hpp>
 
-1499394884 source:d:\code\taskmanagement\src\mainviewcontroller.cpp
+1499441641 source:d:\code\taskmanagement\src\mainviewcontroller.cpp
 	"MainViewController.h"
 	<vector>
 	<cstdlib>
@@ -60,6 +60,71 @@
 	<string>
 
 1499403944 source:d:\code\taskmanagement\src\view.cpp
+	"View.h"
+	<iostream>
+	"bprinter-master/include/bprinter/table_printer.h"
+
+1498760148 source:d:\code\gitrep\taskmanagement\libraries\bprinter-master\src\table_printer.cpp
+	"../include/bprinter/table_printer.h"
+	<stdexcept>
+	<iomanip>
+	<stdexcept>
+
+1493334762 d:\code\gitrep\taskmanagement\libraries\bprinter-master\include\bprinter\table_printer.h
+	<iostream>
+	<iomanip>
+	<vector>
+	<string>
+	<sstream>
+	<cmath>
+	"impl/table_printer.tpp.h"
+
+1493334762 d:\code\gitrep\taskmanagement\libraries\bprinter-master\include\bprinter\impl\table_printer.tpp.h
+	<boost/spirit/include/karma.hpp>
+
+1499444593 source:d:\code\gitrep\taskmanagement\main.cpp
+	<sqlite3.h>
+	<iostream>
+	"Task.h"
+	"View.h"
+	"MainViewController.h"
+	<string>
+	<vector>
+	<cstdio>
+
+1496938190 d:\code\gitrep\taskmanagement\libraries\sqlite3.h
+	<stdarg.h>
+
+1499210409 d:\code\gitrep\taskmanagement\include\task.h
+	<sqlite3.h>
+	<vector>
+	<string>
+
+1499394805 d:\code\gitrep\taskmanagement\include\view.h
+	<vector>
+	<string>
+
+1499210938 d:\code\gitrep\taskmanagement\include\mainviewcontroller.h
+	<string>
+
+1499441641 source:d:\code\gitrep\taskmanagement\src\mainviewcontroller.cpp
+	"MainViewController.h"
+	<vector>
+	<cstdlib>
+	<iostream>
+	<cstdio>
+	"View.h"
+	"Task.h"
+
+1499445181 source:d:\code\gitrep\taskmanagement\src\task.cpp
+	"Task.h"
+	<iostream>
+	<cstdio>
+	<cstring>
+	<ctime>
+	<sstream>
+
+1499403944 source:d:\code\gitrep\taskmanagement\src\view.cpp
 	"View.h"
 	<iostream>
 	"bprinter-master/include/bprinter/table_printer.h"

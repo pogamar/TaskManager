@@ -132,6 +132,7 @@ void MainViewController::editTaskVC(){
     Task *tsk = Task::getTaskObj();
     while(ret) {
         view->getTaskNameDescription(taskname, taskDesc);
+        //std::cout << taskname <<"  " <<taskDesc << std::endl;
         ret = tsk->updateItem(taskId, (char*)taskname.c_str(), (char*)taskDesc.c_str(), errMsg);
         if(ret){
             if(view->showError((const char *)errMsg)  == -1){

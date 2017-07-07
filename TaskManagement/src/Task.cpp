@@ -122,8 +122,8 @@ int Task::addItem(char *taskName, char *taskDescription, char *message){
     std::string taskDate;
     int ret;
     char *errMsg;
-    if(!(taskName || taskDescription) ||(taskName[0]*taskDescription[0] == 0)){
-        snprintf(message, 100, "NAME and DESCRIPTION NULL/EMPTY");
+    if(!(taskName && taskName[0])){
+        snprintf(message, 100, "TASK NAME NULL/EMPTY");
         return -1;
     }
     if(taskName){
@@ -187,29 +187,36 @@ int Task::updateItem(int id, char *taskName, char *taskDescription, char *messag
     std::string taskDate;
     int ret;
     char *errMsg;
+    bool prevItem = false;
     if(!id){
         snprintf(message, 100, "ID NULL");
         return -1;
     }
-    if(!(taskName || taskDescription) || !(taskDate[0]+taskName[0])){
+    if(!(taskName || taskDescription) || !(taskDescription[0]+taskName[0])){
         snprintf(message, 100, "NAME, DESCRIPTION NULL/EMPTY");
         return -1;
     }
-    if(taskName){
+    if(taskName && taskName[0]){
         sql+= "NAME = ";
         sql+="\"";
         sql+= (const char*)taskName;
         sql+="\"";
+        prevItem = true;
     }
-    if(taskDescription){
-        sql+=", DESCRIPTION = ";
+    if(taskDescription && taskDescription[0]){
+        if(prevItem)
+            sql+=",";
+        sql+=" DESCRIPTION = ";
         sql+="\"";
         sql+= (const char*)taskDescription;
         sql+="\"";
+        prevItem = true;
     }
 
+    if(prevItem)
+        sql+=",";
     getDate(taskDate);
-    sql+=", DATE_UPDATED = ";
+    sql+=" DATE_UPDATED = ";
     sql+="\"";
     sql+= taskDate;
     sql+="\"";
